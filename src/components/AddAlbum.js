@@ -1,16 +1,23 @@
+// import necessary dependencies
 import React, { useState } from "react";
-import '../styles/AddAlbum.css';
+import "../styles/AddAlbum.css";
 import InputBox from "./InputBox";
 
+// functional component receiving the "onAddAlbum" prop, that adds new album.
 const AddAlbum = ({ onAddAlbum }) => {
+  // state variables
   const [newAlbumTitle, setNewAlbumTitle] = useState("");
 
   const handleTitleChange = (event) => {
     setNewAlbumTitle(event.target.value);
   };
 
+
+  // async function to ass album in existing list
   const addAlbum = async () => {
+
     try {
+      // asynchronous HTTP POST request to the API endpoint for adding albums
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/albums",
         {
@@ -26,13 +33,18 @@ const AddAlbum = ({ onAddAlbum }) => {
       );
 
       const data = await response.json();
-      onAddAlbum(data); // Pass the new album back to the parent component
-      setNewAlbumTitle(""); // Reset the input field
+
+      // Pass the new album back to the parent component
+      onAddAlbum(data);
+
+      // Reset the input field
+      setNewAlbumTitle("");
     } catch (error) {
       console.error("Error adding album:", error);
     }
   };
 
+  // renders the JSX elements of the AddAlbum component
   return (
     <div className="add-album-container">
       <h2 className="heading">Add Album</h2>

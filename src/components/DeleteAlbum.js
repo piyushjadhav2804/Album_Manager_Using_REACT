@@ -1,19 +1,22 @@
+// import necessary dependencies
 import React from "react";
-import '../styles/Buttons.css';
+import "../styles/Buttons.css";
 
-function DeleteAlbum({albumId, onDelete}) {
+// functional component receiving the "albumId" & "onDelete()" as prop, that deletes the selected album.
+function DeleteAlbum({ albumId, onDelete }) {
+  const handleDeleteClick = () => {
+    if (window.confirm("Are you sure you want to delete this album?"));
+    onDelete(albumId);
+  };
 
-    const handleDeleteClick = () => {
-
-        if(window.confirm("Are you sure you want to delete this album?"));
-        onDelete(albumId);
-    }
-
-    return (
-      <div>
-        <button className="delete-button" onClick={handleDeleteClick}>DELETE</button>
-      </div>
-    );
+  // renders the JSX elements of the DeleteAlbum component
+  return (
+    <div>
+      <button className="delete-button" onClick={handleDeleteClick}>
+        DELETE
+      </button>
+    </div>
+  );
 }
 
 export default DeleteAlbum;
