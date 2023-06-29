@@ -1,3 +1,26 @@
+# Album Manager
+
+Album Manager is a web application that allows users to manage and track their albums. It provides features for adding new albums, updating album details, and deleting albums from the collection. The application fetches album data from an external API and provides a user-friendly interface to interact with the albums.
+
+## Features
+
+- Add new albums: Users can add new albums to their collection by providing the album title.
+- Update album details: Users can update the title of an existing album.
+- Delete albums: Users can remove albums from their collection permanently.
+
+## Technologies Used
+
+- React: JavaScript library for building user interfaces
+- HTML: Markup language for creating web pages
+- CSS: Styling language for designing web pages
+- Fetch API: JavaScript interface for making HTTP requests
+
+## Installation
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd album-manager`
+3. Install dependencies: `npm install`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
