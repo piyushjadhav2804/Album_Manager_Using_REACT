@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../styles/AddAlbum.css';
+import InputBox from "./InputBox";
 
 const AddAlbum = ({ onAddAlbum }) => {
   const [newAlbumTitle, setNewAlbumTitle] = useState("");
@@ -34,13 +35,11 @@ const AddAlbum = ({ onAddAlbum }) => {
 
   return (
     <div className="add-album-container">
-      <h2>Add Album</h2>
-      <input
-        type="text"
+      <h2 className="heading">Add Album</h2>
+      <InputBox
         placeholder="Enter album title"
         value={newAlbumTitle}
         onChange={handleTitleChange}
-        className="album-input"
       />
       <button onClick={addAlbum} className="add-album-button">
         Add

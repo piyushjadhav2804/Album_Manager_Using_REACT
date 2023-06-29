@@ -1,18 +1,10 @@
 .add-album-container {
   margin: 20px;
+  margin-left: 37%;
 }
 
-.album-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 300px;
-}
-
-.album-input:focus {
-  outline: none;
-  border-color: #007bff;
+.heading {
+    margin-left: 120px;
 }
 
 .add-album-button {
