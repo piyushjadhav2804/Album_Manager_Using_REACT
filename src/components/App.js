@@ -1,5 +1,6 @@
 import '../styles/App.css';
 import Header from './Header.js';
+import AddAlbum from './AddAlbum';
 import React, { useEffect, useState } from 'react';
 
 function App() {
@@ -24,9 +25,15 @@ function App() {
     }
   }
 
+  const addAlbum = (newAlbum) => {
+    setAlbums((prevAlbums) => [newAlbum, ...prevAlbums]);
+  }
+
   return (
     <div className="App">
       <Header />
+
+      <AddAlbum onAddAlbum = {addAlbum} />
 
       <div className="album-cards">
         {albums.map((album) => (
